@@ -78,13 +78,14 @@
     delay(100);
  
     //Enviar comando para un nuevos SMS al numero establecido
-    MOD_SIM800L.write("AT+CMGS=\"+573114009876\"\r\n");
+    MOD_SIM800L.write("AT+CMGS=\"+573182024695\"\r\n");
     delay(100);
    
     //Enviar contenido del SMS
-    MOD_SIM800L.println("Latitud/Longitud: ");
-    MOD_SIM800L.print(latitud,5);
-    MOD_SIM800L.print(" ");
+    MOD_SIM800L.println("SearchMe");
+    MOD_SIM800L.print("https://maps.google.com/?q=");
+     MOD_SIM800L.print(latitud,5);
+    MOD_SIM800L.print(",");
     MOD_SIM800L.print(longitud,5);
     delay(1000);
    
